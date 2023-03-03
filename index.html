@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>My OJT Portfolio</title>
+</head>
+<body>
+     <!-----start Hearder section----->
+     <div id="hearder">
+        <div class="contenier">
+            <nav >
+                <h1 class="logo">OJT PORTFOLIO</h1>
+                <ul id="sidmenu">
+                    <li><a href="#hearder">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                 </ul>
+                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+              </nav> 
+              <div class="hearder-text">
+                <p>Intern</p>
+                <h1>Hi I am <span>Jhonrey Eslabon</span> <br> Form StackTrek</h1>
+              </div>       
+            </div>
+        </div>
+     </div>
+      <!-----End Hearder section----->
+
+
+      <!-----start About section----->
+      <div id="about">
+        <div class="contenier">
+            <div class="row">
+                <div class="about-col-1">
+                  <img src="img/prof.jpg" >  
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a friendly person, I'm honest and puntual, I work well in a team but also on my own as I like to set myself goals which I will achieve. I have</p>
+                   <div class="tab-titles">
+                    <p class="tab-links active-link " onclick="opentab('skills')">Personal Info</p>
+                   </div>
+                   <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Fullname</span><br>Jhonrey Eslabon</li>
+                        <li><span>Address</span><br>Baldoza St. Iloilo City</li>
+                        <li><span>Email</span><br>jhonrey.eslabon.s@southlandcollege.edu.ph</li>
+                    </ul>
+                   </div>
+                   
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-----End About section----->
+
+
+
+
+      
+
+
+        <!----portfolio section Start ----->
+
+        <div id="portfolio">
+            <div class="contenier">
+                <h1 class="sub-title">PORTFOLIO</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="img/1.jpg" >                     
+                    </div>
+                    <div class="work">
+                        <img src="img/2.jpg" >                                             
+                    </div>
+                    <div class="work">
+                        <img src="img/3.jpg" >                                             
+                    </div>
+					<div class="work">
+                        <img src="img/4.jpg" >                     
+                    </div>
+                    <div class="work">
+                        <img src="img/5.jpg" >                                             
+                    </div>
+                    <div class="work">
+                        <img src="img/6.jpeg" >                                             
+                    </div>
+                  
+                </div>              
+            </div>
+        </div>
+         <!----portfolio section End ----->
+
+
+          <!----Contact section Start ----->
+          <div id="contact">
+            <div class="contenier">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Us</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>jhonrey.eslabon.s@southlandcollege.edu.ph</p>
+                        <p><i class="fa-solid fa-square-phone-flip"></i>019632880</p>
+                        <div class="social-icons">
+                            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        
+
+                    </div>
+                    <div class="contact-right">
+                        <form >
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="Email" name="Email" placeholder="Your Email" required>
+                            <textarea name="massage" rows="6" placeholder="Your Massage"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright@ 2023 .<i class="fa-solid fa-heart"></i>StackTrek</p>
+            </div>
+          </div>
+   
+          <!----Contact section End ----->
+  
+      <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+      </script>
+
+    <script>
+        var sidmenu = document.getElementById("sidmenu");
+        function openmenu(){
+            sidmenu.style.right ="0";
+        }
+        function closemenu(){
+            sidmenu.style.right ="-200px";
+        }
+    </script>
+</body>
+</html>
